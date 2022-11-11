@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="Author" content="Harry Lee" />
+    <meta name="Description"
+        content="This Website is just for practice, I am not an author of this idea, but it writes on my code style. Ask directly authors in https://www.udemy.com/course/50-web-projects-with-html-css-and-javascript/ if you have some questions. Thank you" />
+    <title>Animated Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Dosis", sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(53, 82, 66, 0.5), rgba(47, 80, 63, 0.6)),
+                url(src/bg.jpg) center no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner {
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 80px;
+            color: #ddd;
+            font-weight: 300;
+            margin-bottom: 30px;
+            animation: moveToLeft 2s;
+        }
+
+        .banner span {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .banner p {
+            font-size: 50px;
+            font-weight: 300;
+            color: #eee;
+            margin-bottom: 20px;
+            animation: moveToRight 2s;
+        }
+
+        .banner button {
+            width: 180px;
+            padding: 12px;
+            margin: 20px;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            font-size: 18px;
+            outline: none;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .btn-left {
+            background-color: #eee;
+            color: #444;
+            animation: animateBtn 1s 1.5s backwards;
+        }
+
+        .btn-right {
+            background-color: transparent;
+            color: #eee;
+            animation: animateBtn 1s 2.3s backwards;
+        }
+
+        @keyframes moveToLeft {
+            0% {
+                transform: translateX(120px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveToRight {
+            0% {
+                transform: translateX(-120px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes animateBtn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="banner">
+            <h1>Another <span>Website</span></h1>
+            <p>Copied by Harry Lee</p>
+            <button type="button" class="btn-left">Explore</button>
+            <button type="button" class="btn-right">Subscribe</button>
+        </div>
+    </div>
+</body>
+
+</html>
